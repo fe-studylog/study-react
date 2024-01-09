@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React ES6 Arrow Functions</title>
+
+    <style>
+        .box { border-bottom:1px solid #ddd; padding:30px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>Regular function</h3>
+        <p id="demo1"></p>
+        <pre>
+            hello = function() {
+                return "Hello World!";
+            }
+        </pre>
+    </div>
+    <div class="box">
+        <h3>Arrow function</h3>
+        <p id="demo2"></p>
+        <pre>
+            hello = () => {
+                return "Hello World!";
+            }
+        </pre>
+    </div>
+    <div class="box">
+        <h3>Implicit Return</h3>
+        <p id="demo3"></p>
+        <pre>
+            hello = () => return "Hello World!";
+        </pre>
+    </div>
+    <div class="box">
+        <h3>Arrow Function with Parameters</h3>
+        <p id="demo4"></p>
+        <pre>
+            hello = (val) => "Hello" + val;
+        </pre>
+    </div>
+    <div class="box">
+        <h3>Arrow Function Without Parentheses</h3>
+        <span>If you have only one parameter, you can skip the parentheses as well.</span>
+        <p id="demo5"></p>
+        <pre>
+            hello = val1 => "Hello" + val1;
+        </pre>
+    </div>
+    
+    <script>
+        hello1 = function() {
+            return "Hello World!";
+        }
+
+        hello2 = () => {
+            return "Hello World!!";
+        }
+
+        hello3 = () => "Hello World!!!";
+
+        hello4 = (val) => "Hello " + val;
+
+        hello5 = val1 => "Hello " + val1;
+
+        document.getElementById("demo1").innerHTML = hello1();
+        document.getElementById("demo2").innerHTML = hello2();
+        document.getElementById("demo3").innerHTML = hello3();
+        document.getElementById("demo4").innerHTML = hello4("World!!!!");
+        document.getElementById("demo5").innerHTML = hello5("World!!!!!");
+    </script>
+</body>
+</html>

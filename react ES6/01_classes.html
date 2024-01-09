@@ -12,18 +12,16 @@
             constructor(name){
                 this.brand = name;
             }
-
             present() {
                 return 'I have a ' + this.brand;
             }
         }
 
-        class Model extends Car {
+        class Model extends Car {           //To create a class inheritance, use the extends keyword.
             constructor(name, mod){
-                super(name);
+                super(name);                //The super() method refers to the parent class.
                 this.model = mod;
             }
-
             show() {
                 return this.present() + ', it is a ' + this.model;
             }
